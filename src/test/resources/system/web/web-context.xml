@@ -4,6 +4,8 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <import resource="classpath:/system/web/steps-context.xml"/>
+
     <bean id="driverProvider" class="org.jbehave.web.selenium.FirefoxWebDriverProvider"/>
 
     <bean id="homePage" class="system.web.pages.HomePage">
