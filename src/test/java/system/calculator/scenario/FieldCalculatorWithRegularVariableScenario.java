@@ -6,13 +6,14 @@ import com.dudek.calculator.figure.Figure;
 import com.dudek.calculator.figure.Rectangle;
 import org.jbehave.core.annotations.*;
 import org.jbehave.core.model.ExamplesTable;
+import org.jbehave.core.steps.Steps;
 
 import java.util.Map;
 
 import static java.lang.Integer.valueOf;
 import static org.junit.Assert.assertEquals;
 
-public class FieldCalculatorWithRegularVariableScenario {
+public class FieldCalculatorWithRegularVariableScenario extends Steps {
     Figure figure;
     FieldCalculator testee = new FieldCalculator();
     double result;
