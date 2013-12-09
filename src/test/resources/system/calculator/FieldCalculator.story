@@ -5,7 +5,6 @@ Then should return PI
 
 
 Scenario: Border cases for circle's field
-Meta:
 Given a circle with radius [radius]
 When asked to compute field
 Then should return [result]
