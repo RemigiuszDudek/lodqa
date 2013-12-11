@@ -35,13 +35,4 @@ public class BasicScenario extends JBehaveAbstractWebScenario {
     private String[] toArray(List<String> intendedVisiblePostsList) {
         return intendedVisiblePostsList.toArray(new String[intendedVisiblePostsList.size()]);
     }
-
-    private static String listToString(List<String> toBeCheckedList) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (String item : toBeCheckedList) {
-            stringBuilder.append(item).append(", ");
-        }
-        stringBuilder.delete(stringBuilder.lastIndexOf(","), stringBuilder.length());
-        return stringBuilder.toString();
-    }
 }
