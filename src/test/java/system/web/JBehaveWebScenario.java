@@ -15,7 +15,7 @@ public class JBehaveWebScenario extends JUnitStory {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/system/web/web-context.xml");
 
         DefaultListableBeanFactory listableBeanFactory = (DefaultListableBeanFactory) context.getBeanFactory();
-        listableBeanFactory. registerBeanDefinition(getClass().getSimpleName(), new RootBeanDefinition(getClass()));
+        listableBeanFactory.registerBeanDefinition(getClass().getSimpleName(), new RootBeanDefinition(getClass()));
 
         return new SpringStepsFactory(configuration(), context);
     }

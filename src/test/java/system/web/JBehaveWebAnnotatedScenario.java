@@ -13,9 +13,9 @@ import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.junit.runner.RunWith;
 
 import java.util.List;
-import java.util.Properties;
 
-import static org.jbehave.core.reporters.Format.*;
+import static org.jbehave.core.reporters.Format.CONSOLE;
+import static org.jbehave.core.reporters.Format.HTML;
 
 @UsingEmbedder
 @RunWith(SpringAnnotatedEmbedderRunner.class)
@@ -34,14 +34,10 @@ public class JBehaveWebAnnotatedScenario extends JUnitStories {
 
     public static class MyStoryReporterBuilder extends StoryReporterBuilder {
         public MyStoryReporterBuilder() {
-            Properties viewResources = new Properties();
-            viewResources.put("decorateNonHtml", "true");
             super.withDefaultFormats()
                     .withFailureTrace(true)
-                    .withViewResources(viewResources)
-                    .withFormats(CONSOLE, TXT, HTML, XML)
+                    .withFormats(CONSOLE, HTML)
                     .withFailureTraceCompression(true)
-//                  .withCrossReference(xref)
                     .withPathResolver(new FilePrintStreamFactory.ResolveToPackagedName());
         }
     }
